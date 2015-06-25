@@ -25,6 +25,7 @@ SECRET_KEY = 'i6+hsm@4&k1)y-5c&7y4wh1@#-!v^f$f%3ey3*9rd2hx7daiwn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#WEBSOCKET_ACCEPT_ALL = True
 ALLOWED_HOSTS = []
 
 
@@ -47,7 +48,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#    'django_websocket.middleware.WebSocketMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'stranger.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mydql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'chat',
 		'USER': 'root',
 		'PASSWORD': 'root',
