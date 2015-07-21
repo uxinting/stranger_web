@@ -20,5 +20,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^chat/', include('chat.urls')),
+    url(r'^$', include('chat.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
